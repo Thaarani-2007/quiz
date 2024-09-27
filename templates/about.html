@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .container{
+               height:200px;
+               position: relative;
+            }
+            .center{
+               margin: 0;
+            position: absolute;
+             top: 50%;
+             left: 50%;
+             -ms-transform: translate(-50%, -50%);
+             transform: translate(-50%, -50%);
+            }
+            .main{
+                font-size:45px;
+                font-width:20px;
+
+            }
+
+            .return{
+             max-width:100%;
+            background-color:#800020;
+            font-size:30px;
+             color:white;
+            border: none;
+            padding-top:25px;
+            padding-left:25px;
+            padding-bottom:25px ;
+            padding-right:25px;
+            border-radius: 7px;
+            cursor: pointer;
+            transition: opacity 0.15s, padding-left 0.15s, padding-right 0.15s;
+            vertical-align: top;
+            margin-left:200px;
+            }
+
+            .return:hover{
+            background-color:red;
+            opacity: 0.7;
+            padding-left: 20px;
+            padding-right: 20px;
+            }
+
+         .return:active{
+             opacity:0.5;
+             }
+        
+         .about{
+            margin-top:150px;
+            padding:40px;
+            color:white;
+            font-width:bold;
+            font-size:50px;
+            display:block;
+            background-color:black;
+            text-align:center;
+            
+
+         }
+         .down{
+
+            padding-bottom:200px;
+            background-color:grey;
+         }
+         .members{
+            color:white;
+            font-size:50px;
+            font-width:25px;
+         }
+         .names{
+            display:inline-block;
+            width:550px;
+            height:200px;
+         }
+
+         .sentiment{
+            display:inline-block;
+            color:white;
+            background-color:grey;
+            font-size:60px;
+            font-width:20px;
+         }
+
+        </style>
+    </head>
+    <body>
+        {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" id="message">
+          <strong>Alert! </strong> {{message}}
+          <button type="button" class="close" onclick="hideMessage()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <script>
+    function hideMessage() {
+      var messageElement = document.getElementById('message');
+      if (messageElement) {
+        messageElement.style.display = 'none';
+      }
+    }
+  </script>
+
+  
+        <div class="container">
+            <div class="center"> 
+                <p class="main"> Thank you for taking part in our G~QUIZ</p>
+                <form action="/">
+                    <button class="return">Return To Homepage</button>
+                </form>
+               
+            </div>
+        </div>
+        <p class="about">ABOUT US</p>
+
+       <div class="names">
+        <div >
+            
+            <div class="down">
+                <p class="members">Ritesh</p>
+                
+                
+                <p class="members">Krish Vishwak</p>
+             
+                <p class="members">Rithika</p>
+                   
+            </div>
+        </div>
+     </div>
+
+     <div class="sentiment">
+        <div>
+            <p>
+                ...We are glad to publish our work to you...
+            </p>
+        </div>
+     </div>
+
+     <script>
+        window.alert({{messages}});
+         
+     </script>
+
+        
+
+
+    </body>
+</html>

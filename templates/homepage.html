@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <title>
+      G~QUIZ
+    </title>
+    <style> 
+      .container{
+        height:200px;
+        position: relative;
+      }
+      .center{
+        margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      }
+        .logo{
+            margin-top:750px;
+       
+        max-width: 100%;
+      height: auto; 
+      display:block;
+      }
+      .welcome-1{
+        color:white;
+        font-size: 50px;
+        text-align: center;
+        vertical-align: top;
+      
+      
+      }
+      
+      
+      .student-login{
+        
+        
+        max-width: 100%;
+        background-color: white;
+        color: black;
+        border: none;
+        padding-left: 10px;
+        padding-right:10px ;
+        font-size: x-large;
+        font-family: arial;
+        text-align: center;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        cursor:pointer;
+        margin-left:250px;
+        
+        border-radius: 10px;
+      
+      
+      }
+      
+      
+      .student-login:hover{
+        box-shadow: 6px 5px 10px rgb(252, 250, 250);
+        background-color: #57001C;
+        color:white;
+        border: none;
+      }
+      
+      
+      .teacher-login{
+        
+      max-width: 100%;
+        background-color: white;
+        color: black;
+        border: none;
+        padding-left: 10px;
+        padding-right:10px ;
+        font-size: x-large;
+        font-family: arial;
+        text-align: center;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        cursor:pointer;
+        margin-left:250px;
+        margin-top:100px;
+        border-radius: 10px;
+      }
+      
+      
+      .teacher-login:hover{
+        box-shadow: 6px 5px 10px rgb(252, 250, 250);
+        background-color: #57002C;
+        color:white;
+        border: none;
+      }
+      .sign-in-button{
+        background-color: white;
+        color: black;
+        border: none;
+        padding-left: 10px;
+        padding-right:10px ;
+        font-size: x-large;
+        font-family: arial;
+        text-align: center;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        cursor:pointer;
+        margin-left: 400px;
+        border-radius: 10px;
+      }
+    
+      .sign-in-button:hover{
+        box-shadow: 6px 5px 10px rgb(252, 250, 250);
+        background-color: black;
+        color:white;
+        border: none;
+      }
+      </style>  
+      
+    {% comment %} <link rel="stylesheet" href="/static/css/homepage.css"> {% endcomment %}
+  </head>
+
+
+  
+  <body style="background-color: #91002E;
+  padding-bottom:10px;">
+  <div class="top-logo"> 
+    
+  </div> 
+ 
+  <div class="container">
+    <div class="center">
+      <img class="logo"src="{% static 'images\logo 1.jpg' %}">
+      <p class="welcome-1">
+        <strong>Welcome to G~QUIZ</strong>
+      </p>
+      
+      <form action="/Student_Login/" >
+        <button class="student-login">
+          STUDENT LOGIN
+        </button>
+      </form>
+
+
+      <form action="admin" target="_blank">
+        <button class="teacher-login">
+          TEACHER LOGIN 
+        </button>
+      </form>
+
+
+      <form action="sign-up">
+        <button class="teacher-login">
+          SIGN-UP
+        </button>
+      </form>
+
+      <form action="about/">
+      <div class="bottom-headder">
+        <button class="teacher-login" >
+          ABOUT US
+        </button>
+      </div>
+    </form>
+      
+
+
+</div>
+  </div> 
+ 
+  </body>
+</html>
